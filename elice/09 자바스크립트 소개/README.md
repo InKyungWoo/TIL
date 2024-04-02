@@ -1,3 +1,14 @@
+# 목차
+
+[1. 자바스크립트 소개](#이론1-자바스크립트-소개) <br>
+[2. 자바스크립트의 변수](#이론2-자바스크립트의-변수) <br>
+[3. 데이터 타입](#이론3-데이터-타입) <br>
+[4. 프로퍼티와 메서드](#이론4-프로퍼티와-메서드) <br>
+
+----------------------------------------------------------------
+
+<br>
+
 ### [이론1] 자바스크립트 소개
 
 - HTML: 웹사이트의 구조
@@ -6,9 +17,11 @@
 > 💡 이미지 슬라이드 효과, 팝업 효과 등의 기능을 포함한 동적인 웹사이트 제작 시 사용되는 프로그래밍 언어 
 
 
-![스크린샷 2024-03-31 오후 7.32.21.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8c2f1236-d0db-4ddc-bef1-ca9b7c92dbd6/6529c604-546a-4544-a426-f0c064455872/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.32.21.png)
+<img width="763" alt="스크린샷 2024-04-01 오후 4 38 55" src="https://github.com/InKyungWoo/TIL/assets/102344718/b257e70b-844f-4fe3-9faf-195a22b0130a">
 
-→ 범용적인 프로그래밍 언어!
+→ 범용적인 프로그래밍 언어! 
+
+<br>
 
 ### [이론2] 자바스크립트의 변수
 
@@ -32,9 +45,7 @@ var fruit = "apple";
 fruit = "banana";
 ```
 
-fruit 라는 변수의 데이터를 apple → banana로 변경
-
-(또 다른 변수를 선언할 필요는 X)
+fruit 라는 변수의 데이터를 apple → banana로 변경, (또 다른 변수를 선언할 필요는 X)
 
 - **데이터 확인 방법**
 
@@ -73,18 +84,21 @@ document.write();     // 웹 화면에 출력
 document.writeln();   // 출력값 사이에 공백 넣기
 ```
 
+<br>
+
 ### [이론3] 데이터 타입
 
-![스크린샷 2024-03-31 오후 7.51.58.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8c2f1236-d0db-4ddc-bef1-ca9b7c92dbd6/f09702ef-4847-4382-903a-5190c79c62a2/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.51.58.png)
+<img width="747" alt="스크린샷 2024-04-01 오후 4 39 19" src="https://github.com/InKyungWoo/TIL/assets/102344718/5a33bf4d-eca6-4c34-8701-279ad14fb209">
+
 
 1. **문자열**
 - “” , ‘’ 안에 작성된 데이터
 - `“He’s a boy”;`, `‘He\’s a boy’;`
 
-1. **숫자**
+2. **숫자**
 - 별도의 기호 없이 입력 (정수, 음수, 실수 등)
 
-1. **함수**
+3. **함수**
 - 함수 생성: function 키워드를 사용하여 생성
 - 함수 호출: 함수 안에 있는 코드를 실행시키겠다는 의미
 
@@ -104,9 +118,9 @@ function func1() {
 func1();  //함수 호출
 ```
 
-![스크린샷 2024-03-31 오후 8.01.13.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8c2f1236-d0db-4ddc-bef1-ca9b7c92dbd6/ba7ffb59-3d62-4883-884e-f530ffa14efd/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.01.13.png)
+<img width="759" alt="스크린샷 2024-04-01 오후 4 39 52" src="https://github.com/InKyungWoo/TIL/assets/102344718/67927424-7cd6-4e7d-8143-b833553e2834">
 
-1. **배열**
+4. **배열**
 - 비슷한 성격을 갖고 있는 데이터를 하나의 변수 안에서 관리
 
 ```jsx
@@ -125,9 +139,9 @@ fruit[0] = "포도";
 console.log(fruit);   //["포도", "배", "수박"]
 ```
 
-1. **객체**
-
-![스크린샷 2024-03-31 오후 8.09.07.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8c2f1236-d0db-4ddc-bef1-ca9b7c92dbd6/5a7beff9-3698-4f92-8c03-d1270c3e5ad8/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-03-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.09.07.png)
+5. **객체**
+   
+<img width="766" alt="스크린샷 2024-04-01 오후 4 40 13" src="https://github.com/InKyungWoo/TIL/assets/102344718/cbdd6feb-6c53-4e66-992b-07761844442b">
 
 ```jsx
 var student = {
@@ -146,7 +160,7 @@ student.name = "minju";        // name 프로퍼티의 데이터 변경
 console.log(student.name);     // minju 출력
 ```
 
-1. **불린**
+6. **불린**
 - 참 또는 거짓 데이터가 들어가 있는 상태
 
 ```jsx
@@ -154,19 +168,21 @@ var t = true;
 var f = false;
 ```
 
-1. **undefined**
+7. **undefined**
 - 변수 안에 데이터를 입력하지 않은 상태 `데이터 없음`
 
 ```jsx
 var unde;
 ```
 
-1. null
+8. **null**
 - 임의로 변수 안에 빈 데이터를 삽입한 상태 `빈 데이터를 지정`
 
 ```jsx
 var empty = null;
 ```
+
+<br>
 
 ### [이론4] 프로퍼티와 메서드
 
@@ -211,6 +227,9 @@ parseFloat("20.6");  // 실수 형태의 20.6 변환
 ```
 
 > 참고
-> 
 
 [String - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+<br>
+
+[🔝 이동하기](#목차)
