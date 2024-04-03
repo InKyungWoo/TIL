@@ -25,6 +25,7 @@ function solution(money) {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 - 조건에 맞는 암호
 
@@ -54,6 +55,7 @@ function solution(input) {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 - 약수 찾기
 
@@ -75,23 +77,21 @@ function solution(input) {
 module.exports = solution;
 
 ```
+<br>
 
-<aside>
-💡 let 함수
 
----
+> 💡 let 함수 <br>
+> for문에서 let을 사용하지 않으면 변수 i가 전역 변수로 선언되어 현재 스코프 밖에서도 접근할 수 있게 된다 <br>
+  -> 변수 충돌이나 의도하지 않은 변수 값 변경 등의 문제가 발생할 수 있음 <br>
+> 따라서 let을 사용하여 변수 i를 블록 범위로 제한하는 것이 좋다. 이렇게 하면 for문 내에서만 변수 i에 접근할 수 있고,<br>
+for문이 끝나면 변수 i는 사라지게 됨. 코드의 가독성을 높이고 변수 관리를 효율적으로 할 수 있음!
 
 ```jsx
 for (let i = 1; i <= input; i++)
 ```
+<br>
 
-for문에서 let을 사용하지 않으면 변수 i가 전역 변수로 선언되어 현재 스코프 밖에서도 접근할 수 있게 됩니다. 이는 변수 충돌이 발생할 수 있고 의도하지 않은 변수 값 변경 등의 문제가 발생할 수 있습니다.
-
-따라서 let을 사용하여 변수 i를 블록 범위로 제한하는 것이 좋습니다. 이렇게 하면 for문 내에서만 변수 i에 접근할 수 있고, for문이 끝나면 변수 i는 사라지게 됩니다. 이는 코드의 가독성을 높이고 변수 관리를 효율적으로 할 수 있게 도와줍니다
-
-</aside>
-
-- 3, 6, 9 게임  🌟
+- 3, 6, 9 게임 
 
 ```jsx
  // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
@@ -138,6 +138,7 @@ function solution() {
   return answer;
 }
 ```
+<br>
 
 - 숫자 출력
 
@@ -156,6 +157,7 @@ function solution(num) {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 - 노동요
 
@@ -180,6 +182,7 @@ function solution(s) {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 - 음식 가격 계산하기
 
@@ -198,6 +201,7 @@ function solution() {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 - 변수 비교하기
 
@@ -218,6 +222,7 @@ function solution() {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 - 변수 다루기
 
@@ -233,6 +238,7 @@ function solution(num, string) {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 - 소수의 합 구하기
 
