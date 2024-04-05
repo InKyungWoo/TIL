@@ -447,3 +447,121 @@ function solution(input) {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
+
+### 21. 8은 특별해!
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution() {
+    var cnt = 0;
+    for (let i = 1; i <= 10000; i++) {
+        var num = String(i);
+        for (let j = 0; j < num.length; j++) {
+            if (num[j] == "8") {
+                cnt += 1;
+            }
+        }
+    }
+    return cnt;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<br>
+
+### 22. 끼리끼리
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(input) {
+    var red_pocket = [];
+    var blue_pocket = []
+    var total_pocket = [];
+
+    var card = input.split(" ");
+    for (let i = 0; i < card.length; i++) {
+        if (card[i] >= 0) {
+            red_pocket.push(card[i])
+        } else {
+            blue_pocket.push(card[i]);
+        }
+    }
+    total_pocket.push(red_pocket);
+    total_pocket.push(blue_pocket);
+
+    return total_pocket;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<br>
+
+### 23. 암호문 해석하기
+
+```jsx
+// 암호의 알파벳을 키로, 대응하는 원문의 알파벳을 값으로 저장한 딕셔너리입니다.
+var signal1 = {'a': 'n', 'b': 'd', 'c': 'a', 'd': 'b', 'e': 'e', 'f': 'l', 'g': 'j', 'h': 'o', 'i': 'z', 'j': 'u', 'k': 'y', 'l': 'v', 'm': 'w', 'n': 'q', 'o': 'x', 'p': 'r', 'q': 'p', 'r': 'f', 's': 'g', 't': 't', 'u': 'm', 'v': 'h', 'w': 'i', 'x': 'c', 'y': 'k', 'z': 's'}
+
+var signal2 = {'a': 'z', 'b': 'y', 'c': 'x', 'd': 'w', 'e': 'v', 'f': 'u', 'g': 't', 'h': 's', 'i': 'r', 'j': 'q', 'k': 'p', 'l': 'o', 'm': 'n', 'n': 'm', 'o': 'l', 'p': 'k', 'q': 'j', 'r': 'i', 's': 'h', 't': 'g', 'u': 'f', 'v': 'e', 'w': 'd', 'x': 'c', 'y': 'b', 'z': 'a'}
+
+// 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(code) {
+    var code = code.split(" ");
+    var code_num = code[0];
+    var code_char = code[1];
+
+    var answer = "";
+    for (let i = 0; i < code_num.length; i++) {
+        if (code_num[i] == 0) {
+            answer += signal1[code_char[i]]
+        } else {
+            answer += signal2[code_char[i]]
+        }
+    }
+    
+    return answer;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+// input = 01011 eowxvqp
+```
+<Br>
+
+### 24. 겹치는 구간의 길이
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(a, b) {
+    // 선분을 파싱하여 중심점과 길이 추출
+    const aParts = a.split(',');
+    const a_center = Number(aParts[0]);
+    const a_length = Number(aParts[1]);
+
+    const bParts = b.split(',');
+    const b_center = Number(bParts[0]);
+    const b_length = Number(bParts[1]);
+
+    // 시작점과 끝점 계산
+    const a_start = a_center - (a_length / 2);
+    const a_end = a_center + (a_length / 2);
+    const b_start = b_center - (b_length / 2);
+    const b_end = b_center + (b_length / 2);
+
+    // 겹치는 구간 시작점과 끝점 찾기
+    const range_start = Math.max(a_start, b_start);
+    const range_end = Math.min(a_end, b_end);
+    
+    if (range_end < range_start) {
+        return 0;
+    } else {
+        return range_end - range_start;
+    }
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
