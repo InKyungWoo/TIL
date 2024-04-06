@@ -175,3 +175,275 @@ function solution() {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
+
+### 11. 엘리스 토끼의 수학 숙제
+
+
+> 💡 1부터 매개변수 **`num`** 까지의 합의 제곱과 제곱의 합의 차이를 출력하세요.
+> - 합의 제곱 수식<br>
+>  (1 + 2 + 3 + ・・・ 8 + 9 + N)^2 <br>
+> - 제곱의 합 수식 <br>
+>    1^2 + 2^2 + 3^2 + ・・・ 8^2 + 9^2 + N^2
+    
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(num) {
+  //console.log(num);
+  var sum1 = 0; var squreSum = 0;
+
+  // 합의  제곱 구하기
+  for (i=1; i<=num; i++) {
+      sum1 += i;
+  }
+  var sumSqure = sum1 * sum1;
+
+  // 제곱의 합 구하기
+  for (i=1; i<=num; i++) {
+      squreSum += i * i;
+  }
+  
+  var answer = sumSqure - squreSum;
+  return answer;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<br>
+
+### 12. 구슬 꾸러미
+
+
+> 💡 `input`  매개변수로부터 구슬 꾸러미의 무게를 입력받고 꾸러미를 만드는 데 사용되는 최소 구슬의 수를 출력하세요.
+- (1 ≤ *input* ≤ 10,000)
+- 만약 무게에 맞추어 꾸러미를 만들 수 없는 경우에는 **`1`**을 출력하세요.
+
+```jsx
+
+```
+<br>
+
+### 13. 렌터카
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(hour, price, defaultPrice, defaultHour, defaultCost) {
+  var H = hour; //엘리스 토끼가 이용할 시간
+  var A = price; //모자장수 렌터카의 시간당 비용 
+  var B = defaultPrice; //코더랜드 렌터카 기본요금
+  var C = defaultHour; //코더랜드 렌터카 기본시간
+  var D = defaultCost; //코더랜드 렌터카 기본시간 이후 시간당 부과 요금
+
+  cost1 = hour * price;
+  cost2 = defaultPrice + (hour - defaultHour) * defaultCost;
+  var min_cost;
+
+  if (cost1 < cost2) {
+      min_cost = cost1;
+  } else {
+      min_cost = cost2;
+  }
+  // 최소비용을 return 하세요.
+  return min_cost;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<br>
+
+### 14. 마천루 🌟
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(input) {
+  var line = "";
+  for (let i=1; i <= input; i++) {
+      if (i <= 5) {
+          for (let j=1; j <= i; j++) {
+              line += "*";
+          }
+      } else {
+          for (let j=1; j <= 5; j++) {
+              line += "*";
+          }
+      }
+      if (i !== input) {
+          line += "\n";
+      }
+  }
+  return line;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<Br>
+
+### 15. 문자열 앞뒤 검사하기
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(str) {
+  var palindrome = [];
+  for (let i = 0; i < str.length/2 ; i++) {
+      //console.log(str[i]);
+      //console.log(str[(str.length-1) - i]);
+      var result = (str[i] == str[(str.length)-1 - i]);
+      if (result) {
+          palindrome.push("Same");
+      } else {
+          palindrome.push("Different");
+      }
+  }
+  return palindrome.join("\n");
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<br>
+
+### 16. 수타박수 
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(input) {
+  //console.log(input[1]);
+  var total = 0;
+  for (let i = 0; i < input.length; i++) {
+      if (input[i] == "아메리카노") {
+          total += 4100;
+      } else if (input[i] == "카페라떼") {
+          total += 4600;
+      } else {
+          total += 5100;
+      }
+  }
+  return total;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<Br>
+
+### 17. 반쪽짜리 피라미드 🌟
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(num) {
+  //console.log(num);
+  let line = "";
+  for (let i=1; i <= num; i++) {
+      for (let j=num-1; j >= i; j--) {
+          line += " ";
+      }
+      for (let k=1; k<=i; k++) {
+          line += "*";
+      }
+      // 맨 마지막줄 제외 줄바꿈 
+      if (i !== num) {
+          line += "\n";
+      }
+  } 
+  return line;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<br>
+
+### 18. 좋아하는 숫자만 골라내기 🌟
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(input) {
+    var num_tuple = ['2', '3', '5', '6', '7', '8', '9'];
+    var result = [];
+    
+    for (let i = 0; i < input.length; i++) {
+        if (num_tuple.includes(input[i])) {
+            if (result.length < 5) {
+                result.push(input[i]);
+            } else {
+                break;
+            }
+        }
+    }
+    return result;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<br>
+
+### 19. 잘린 피라미드 만들기
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(a, b) {
+    result = "";
+    if (b > 15) {b = 15;}   // 최대 크기 제한
+    
+    if (a >= b) {
+        result = "오류";
+    } else {
+        for (let i = a; i <= b; i++) {
+            for (let j = 1; j <= i; j++) {
+                result += "*";
+            }
+            // 현재 줄이 마지막 줄이 아니라면 줄바꿈 추가
+            if (i !== b) {
+                result += "\n";
+            }
+        }
+    }
+    return result;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
+<Br>
+
+### 20. 겹치는 구간 찾기
+
+```jsx
+ // 지시사항을 참고하여 solution 함수 안에 코드를 작성하세요. 
+function solution(input) {
+    const range = input.split("\n");
+    const A_start = Number(range[0]);
+    const A_end = Number(range[1]);
+    const B_start = Number(range[2]);
+    const B_end = Number(range[3]);
+
+    // 겹치는 구간 시작점, 끝점 찾기
+    var min; var max; var answer = [];
+    if (A_start <= B_start) {
+        min = B_start;
+    } else {
+        min = A_start;
+    }
+    if (A_end <= B_end) {
+        max = A_end;
+    } else {
+        max = B_end;
+    }
+    
+    if (max < min) {
+        return "X";     // 안겹치는 경우
+    } else {
+        answer.push(min);
+        answer.push(max);
+    }
+    return answer;
+}
+
+// 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
+module.exports = solution;
+```
