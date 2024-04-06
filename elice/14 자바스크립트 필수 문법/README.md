@@ -1,3 +1,13 @@
+## TOC
+
+[- 템플릿 리터럴](#템플릿-리터럴템플릿-리터럴) <br>
+[- Split 메서드](#split-메서드) <br>
+[- Sort 메서드](#sort-메서드) <br>
+[- 아스키 코드](#ascii아스키-코드) <br>
+[- Join 메서드](#join-메서드) <br>
+
+<br>
+
 ### 템플릿 리터럴
 
 - Javascript의 기능 중 하나로 문자열을 표현하는 새로운 방식, 백틱```` 으로 감싼다
@@ -38,6 +48,7 @@ function solution(person) {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 ### Split() 메서드
 
@@ -57,6 +68,7 @@ function solution(word) {
 module.exports = solution;
 //['010', '1234', '5678']
 ```
+<br>
 
 ### Sort() 메서드
 
@@ -104,6 +116,7 @@ function solution(numbers) {
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
 ```
+<br>
 
 ### **ASCII(아스키) 코드**
 
